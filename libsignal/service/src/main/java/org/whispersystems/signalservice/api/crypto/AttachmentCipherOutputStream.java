@@ -102,7 +102,7 @@ public class AttachmentCipherOutputStream extends DigestingOutputStream {
 
   private Cipher initializeCipher() {
     try {
-      return Cipher.getInstance("AES/CBC/PKCS5Padding");
+      return Cipher.getInstance("AES/GCM/PKCS5Padding");
     } catch (NoSuchAlgorithmException | NoSuchPaddingException e) {
       throw new AssertionError(e);
     }
